@@ -38,7 +38,7 @@
             // bindValue() is a PDO method that binds a value to a parameter in a prepared statement.
             // PDO::PARAM_STR is a constant that specifies the data type of the parameter.
             // PDO::PARAM_BOOL is a constant that specifies the data type of the parameter.
-            $stmt->bindValue(":is_active", (bool)$data["is_active"], PDO::PARAM_BOOL);
+            $stmt->bindValue(":is_active", (bool)1, PDO::PARAM_BOOL);
             $stmt->execute();
             return $this->conn->lastInsertId();
             // lastInsertId() is a PDO method that returns the ID of the last inserted row or sequence value.
